@@ -5,7 +5,6 @@
  * Website: http://www.bootstrapwizard.info
 */
 
-
 html, body{
   height:100%;
 }
@@ -33,6 +32,7 @@ h5,
 h6 {
    /*font-weight:bold;*/
    font-family: 'Novecento Sans W01 Wd Lt';
+   text-transform: lowercase;
   /* text-shadow: 1px 1px 1px rgba(0,0,0,0.5);*/
 }
 
