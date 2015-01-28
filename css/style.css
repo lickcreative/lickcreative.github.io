@@ -321,7 +321,7 @@ ul.nav {
   font-family: 'Novecento Sans W01 Wd Md';
   font-size: 18px;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
 }
 
 .navbar-custom{
@@ -375,7 +375,7 @@ ul.nav {
 
 @media (max-width: 767px) {
 
-  .navbar-custom .navbar-nav>li>a {
+  /* .navbar-custom .navbar-nav>li>a {
     color: #fff;
     font-size:16px;
     border: none
@@ -389,7 +389,7 @@ ul.nav {
 
   .navbar-custom  .navbar-nav>li.active a {
     color:#ED0971;
-  }
+  } */
 
   .topsection {
     display: none;
