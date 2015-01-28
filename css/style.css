@@ -133,16 +133,30 @@ ul.unstyled {
 	background-size: cover;*/
 }
 
+.paddt-60 {
+  padding-top:60px;
+}
+
+/* ==================================================
+  Video & Controls
+====================================================*/
+
 video#bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -999;
 background: url(bg.jpg) no-repeat;
 background-size: cover;
+transition: 1s opacity;
 }
 
-.paddt-60 {
-	padding-top:60px;
+#vidpause {
+  position: fixed;
+  margin-bottom: 10px;
+}
+
+.stopfade {
+  opacity: .5;
 }
 
 
@@ -265,6 +279,12 @@ background-size: cover;
 /* ==================================================
 	navigation
 ====================================================*/
+
+ul.nav {
+  font-family: 'Novecento Sans W01 Wd Md';
+  font-size: 18px;
+  text-transform: uppercase;
+}
 
 .navbar-custom{
 	background-color:transparent;
