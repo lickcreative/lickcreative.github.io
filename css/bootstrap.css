@@ -3860,7 +3860,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-/*@media (min-width: 768px) {*/
+@media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -3902,7 +3902,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: 0px;
   text-align: center;
 }
-/*@media (min-width: 768px) {*/
+@media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -3916,11 +3916,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-static-top {
     border-radius: 0;
   }
-}*/
+}
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -3958,7 +3958,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
-/*@media (min-width: 768px) {*/
+@media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
@@ -3988,11 +3988,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
-}*/
+}
 .navbar-nav {
   margin: 7.5px -15px;
   float: none;
@@ -4020,7 +4020,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin: 0;
   }
 }
-/*@media (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4042,7 +4042,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
-}*/
+}
 
 .navbar-form {
   padding: 10px 15px;
