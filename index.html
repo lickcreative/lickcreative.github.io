@@ -9,7 +9,8 @@
 		<title>Lick Creative | The Thinking Behind It</title>
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
 		<!-- Main-Style -->
 		<link href="css/style.css" rel="stylesheet">
 		<!-- Open Sans body font -->
@@ -67,7 +68,7 @@
 					</ul>
 					<!-- Button group for play/pause/mute -->
 					<div class="navbar-right">
-						<div class="btn-group btn-group-lg" role="group">
+						<div class="btn-group btn-group-lg navbuttons" role="group">
 							<button type="button" class="btn btn-custom" id="pausebutton">
 								<i class="fa fa-pause" id="pauseicon"></i>
 							</button>
@@ -83,14 +84,21 @@
 
 
 		<!-- Top space for video-->
-		<div id="top" class="fullSection"></div>
+		<div id="top" class="fullSection topsection"></div>
 		<!-- ./Space -->
 
         <!-- Video bg -->
 
-        <video autoplay muted id="bgvid">
+        <video autoplay muted class="bgvid">
 					<source src="images/video.webm" type="video/webm">
 					<source src="images/video.mp4" type="video/mp4">
+				</video>
+
+			<!-- for mobile -->
+
+			<video autoplay muted class="mobilevid">
+				<source src="images/video.webm" type="video/webm">
+				<source src="images/video.mp4" type="video/mp4">
 			</video>
 
 			<!-- ./Video bg -->

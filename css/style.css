@@ -178,7 +178,7 @@ ul.unstyled {
   Video & Controls
 ====================================================*/
 
-video#bgvid {
+video.bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -999;
@@ -321,6 +321,7 @@ ul.nav {
   font-family: 'Novecento Sans W01 Wd Md';
   font-size: 18px;
   text-transform: uppercase;
+  text-align: right;
 }
 
 .navbar-custom{
@@ -368,12 +369,45 @@ ul.nav {
 }*/
 
 
+.mobilevid {
+  display: none;
+}
+
 @media (max-width: 767px) {
 
-	/*#top-nav {
-		background-color:rgba(0,0,0,0.6);
-	}
-*/
+  .navbar-custom .navbar-nav>li>a {
+    color: #fff;
+    font-size:16px;
+    border: none
+  }
+
+  .navbar-custom .nav>li>a:hover, .navbar-custom .nav>li>a:focus {
+    color:#fff;
+    background:transparent;
+    border-radius: 0;
+  }
+
+  .navbar-custom  .navbar-nav>li.active a {
+    color:#ED0971;
+  }
+
+  .topsection {
+    display: none;
+  }
+
+  .bgvid {
+    display: none
+  }
+
+  .mobilevid {
+    display: block;
+    max-width: 100%;
+  }
+
+  .navbuttons {
+    display: none;
+  }
+
 	.navbar-custom .navbar-brand  {
 		padding: 0 0 0 15px;
 	}
@@ -1167,6 +1201,10 @@ blockquote footer {
   .navbar .navbar-collapse {
     text-align: center;
   } */
+}
+
+.navbar-collapse {
+  box-shadow: none;
 }
 
 
