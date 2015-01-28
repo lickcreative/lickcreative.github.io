@@ -40,10 +40,11 @@ a {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    color: #ED0971;
 }
 
 a:active, a:visited {
-	color:#fff;
+	color:#ED0971;
 }
 
 .btn:focus {
@@ -80,6 +81,20 @@ ul.unstyled {
   margin-bottom: 100px;
 }
 
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
 .img-full {
 	width:100%;
 }
@@ -110,18 +125,29 @@ ul.unstyled {
 }
 
 .form-control:focus {
-	border-color:#fff;
+	border-color:#ED0971;
 	box-shadow:none;
+}
+
+.has-success .form-control {
+  border-color: #3c763d;
+}
+
+.has-warning .form-control {
+  border-color: #8a6d3b;
 }
 
 .has-error .form-control, .has-error .form-control:focus {
 	border-color: #fff;
 }
-
-.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
-	color: red;
-	font-weight:bold;
+.help-block>ul {
+  list-style-type: none;
 }
+
+/* .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: red;
+  font-weight:bold;
+} */
 
 /*#bg_pattern {
 	background-image: url(../images/bg_pattern.png);
@@ -788,6 +814,7 @@ ul.social-link li a i{
 #footer {
 	padding: 20px 0;
 	background: rgba(0,0,0,0);
+  font-size: 14px;
 }
 
 
