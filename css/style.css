@@ -162,7 +162,7 @@ ul.unstyled {
 */
 
 .bg-static {
-    background: #000;
+    background: rgba(50,50,50,.95);
 	/*background: url(../images/bg.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -321,7 +321,7 @@ ul.nav {
   font-family: 'Novecento Sans W01 Wd Md';
   font-size: 18px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: right;
 }
 
 .navbar-custom{
@@ -375,6 +375,10 @@ ul.nav {
 
 @media (max-width: 767px) {
 
+  .navbar-custom {
+    background-color: #000;
+  }
+
   /* .navbar-custom .navbar-nav>li>a {
     color: #fff;
     font-size:16px;
@@ -402,6 +406,7 @@ ul.nav {
   .mobilevid {
     display: block;
     max-width: 100%;
+    padding: 70px 0 0 0;
   }
 
   .navbuttons {

@@ -6,7 +6,7 @@
 		<meta name="description" content="A creative agency based in London">
 		<meta name="author" content="Lick Creative">
 		<link rel="shortcut icon" href="images/logo.png">
-		<title>Lick Creative | The Thinking Behind It</title>
+		<title>Lick Creative | The thinking behind it</title>
 
 		<!-- Bootstrap -->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -59,10 +59,9 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-nav">
-					<ul class="nav navbar-nav navbar-left">
+					<ul class="nav navbar-nav navbar-left" data-toggle="collapse" data-target=".nav-collapse">
 					<li class="page-scroll"><a href="#top">Home</a></li>
 					<li class="page-scroll"><a href="#about">About</a></li>
-					<!-- <li class="page-scroll"><a class="avbar-brand" href="#"><img src="images/logo.png" alt="Lick Logo"></a></li> -->
 					<li class="page-scroll"><a href="#work">Work</a></li>
 					<li class="page-scroll"><a href="#contact">Contact</a></li>
 					</ul>
@@ -334,6 +333,15 @@ pauseIcon.classlist.add("fa-play");
 })
 
 
+	</script>
+
+	<!-- Collapse nav menu on click -->
+	<script>
+	$(document).on('click','.navbar-collapse.in',function(e) {
+	if( $(e.target).is('a') ) {
+			$(this).collapse('hide');
+	}
+});
 	</script>
 
 	</body>
