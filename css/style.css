@@ -69,11 +69,14 @@ ul.unstyled {
     -o-background-size: cover;
 }
 
-#about, #contact, #showcase {
+#about, #contact, #work {
 
     /* background-color: rgba(20,30,50,.9); */
     background-color: rgba(50,50,50,.95);
+}
 
+#top {
+  padding:0;
 }
 
 .img-full {
