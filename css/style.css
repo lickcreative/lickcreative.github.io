@@ -71,7 +71,8 @@ ul.unstyled {
 
 #about, #contact, #showcase {
 
-    background-color: rgba(20,30,50,.9);
+    /* background-color: rgba(20,30,50,.9); */
+    background-color: rgba(50,50,50,.95);
 
 }
 
@@ -81,14 +82,20 @@ ul.unstyled {
 
 .btn-custom {
 	background:transparent;
-	border: 2px solid #fff;
+	border: 2px solid #ED0971;
 	color:#fff;
 }
 
 .btn-custom:hover {
-	background: #fff !important;
-	border: 2px solid #fff;
-	color:#333;
+	background: #ED0971 !important;
+	border: 2px solid #ED0971;
+	color:#fff;
+}
+
+.btn-custom:focus {
+  background: #ED0971 !important;
+  border: 2px solid #ED0971;
+  color:#000;
 }
 
 .form-control {
@@ -296,21 +303,25 @@ ul.nav {
 .navbar-custom .navbar-nav>li>a {
 	color: #fff;
 	font-size:16px;
+  border: 2px solid transparent;
 }
 
 .navbar-custom .nav>li>a:hover, .navbar-custom .nav>li>a:focus {
-	background:transparent;
-	color:#fff;
-	font-weight:bold;
+  color:#fff;
+  background:transparent;
+  border: 2px solid #ED0971;
+  border-radius: 6px;
 }
 
 .navbar-custom  .navbar-nav>li.active a {
-	color:#fff;
-	font-weight:bold;
+	color:#000;
+  background: #ED0971;
+  border: 2px solid #ED0971;
+  border-radius: 6px;
 }
 
 .navbar-custom .navbar-brand {
-	padding:0;
+	padding: 0 20px 0 0;
 }
 
 .navbar-custom  .navbar-toggle .icon-bar {
@@ -1118,6 +1129,13 @@ blockquote footer {
 	.nav-tabs.nav-justified > li > a {
 		border-bottom: 0;
 	}
+  /* Centre nav bar
+  .navbar-left {
+    float: none !important;
+  }
+  .navbar .navbar-collapse {
+    text-align: center;
+  } */
 }
 
 
