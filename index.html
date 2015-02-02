@@ -71,7 +71,7 @@
 							<button type="button" class="btn btn-custom" id="pausebutton">
 								<i class="fa fa-pause" id="pauseicon"></i>
 							</button>
-							<button type="button" class="btn btn-custom" id="vidmute">
+							<button type="button" class="btn btn-custom" id="mutebutton">
 								<i class="fa fa-volume-off" id="muteicon"></i>
 							</button>
 						</div><!-- ./btn-group -->
@@ -88,7 +88,7 @@
 
         <!-- Video bg -->
 
-        <video autoplay muted class="bgvid">
+        <video autoplay muted id="bgvid" class="bgvid">
 					<source src="images/video.webm" type="video/webm">
 					<source src="images/video.mp4" type="video/mp4">
 				</video>
@@ -113,10 +113,16 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-12 col-sm-12 wow fadeInUp showdelay2">
+					<div class="col-md-6 col-sm-6 wow fadeInUp showdelay2">
 						<!--<h3>1/2</h3>-->
 						<p>We ideate, design and deliver digital products and services that connect and engage. Our multi-disciplinary team develop immersive consumer experiences across multiple industries. We collaborate with our clients, supplying the thinking behind the content that satisfies audience needs and surpasses business goals</p>
 					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="pic wow fadeInUp showdelay2">
+						<img src="images/img4.jpg" alt="about image" class="img-responsive">
+					</div>
+					</div>
+
 				</div>
 				<!-- /row -->
 
@@ -137,22 +143,22 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img2.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img2.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img3.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img3.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img4.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img4.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 				</div>
@@ -161,22 +167,22 @@
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img5.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img5.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img6.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img6.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img7.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img7.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
 						<div class="pic wow flipInX showdelay2">
-							<a href="images/img8.jpg" class="gallery-item"><img class="img-responsive img-thumbnail" src="images/img8.jpg" alt=""><div class="img_overlay"></div></a>
+							<a href="images/img1.jpg" class="gallery-item"><img class="img-responsive img-circle" src="images/img1.jpg" alt=""><div class="img_overlay"></div></a>
 						</div>
 					</div>
 				</div>
@@ -307,10 +313,7 @@
 
 var vid = document.getElementById("bgvid");
 var pauseButton = document.getElementById("pausebutton");
-var pauseIcon = document.getElementById("pauseicon");
-var muteIcon = document.getElementById("muteicon");
-
-
+var pauseIcon = document.getElementById("pauseicon")
 function vidFade() {
 vid.classList.add("stopfade");
 }
@@ -324,16 +327,26 @@ pauseButton.addEventListener("click", function() {
 vid.classList.toggle("stopfade");
 if (vid.paused) {
 vid.play();
-pauseIcon.classlist.add("fa-pause");
+<!-- pauseButton.innerHTML = ""; -->
 } else {
 vid.pause();
-pauseIcon.classlist.remove("fa-pause")
-pauseIcon.classlist.add("fa-play");
+<!-- pauseButton.innerHTML = ""; -->
 }
 })
 
+	</script>
+
+	<!-- Toggle play/pause button -->
+	<script>
+
+$(document).read(function() {
+	$("#pausebutton").click(function() {
+		$("#pauseicon").toggleClass("fa-pause");
+	});
+});
 
 	</script>
+
 
 	<!-- Collapse nav menu on click -->
 	<script>
