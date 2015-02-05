@@ -1224,7 +1224,7 @@ background: rgba(0, 0, 0, 0.3);
     padding: 0 0 0 15px;
   }
 
-  .topsection {
+  .topSection {
     display: none;
   }
 
@@ -1232,7 +1232,7 @@ background: rgba(0, 0, 0, 0.3);
     display: none
   }
 
-  .mobilevid {
+  .mobileVid {
     display: block;
     max-width: 100%;
     padding: 10px 0 0 0;
