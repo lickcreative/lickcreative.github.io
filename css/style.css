@@ -276,20 +276,6 @@ ul.unstyled {
 	width:32px;
 }
 
-.top-nav-collapse {
-	background-color:rgba(0,0,0,0.8);
-	-webkit-transition: all .8s ease-in-out;
-    -moz-transition: all .8s ease-in-out;
-    transition: all .8s ease-in-out;
-}
-
-
-@media (max-width: 767px) {
-
-
-}
-
-
 
 /* ==================================================
 	fullscreen slider
@@ -1196,9 +1182,17 @@ video.bgvid {
 /* Modal style overrides */
 
 .in {
-background: rgba(0, 0, 0, 0.3);
+background: rgba(0,0,0,.8);
 }
 
+/* Fade nav on scroll */
+
+.top-nav-collapse {
+  background-color:rgba(0,0,0,.8);
+  -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
 
 /* Mobile nav menu styles */
 
@@ -1219,6 +1213,10 @@ background: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 767px) {
+
+  .navbar-custom {
+    background: rgba(0,0,0,.8);
+  }
 
   .navbar-custom .navbar-brand  {
     padding: 0 0 0 15px;
@@ -1242,7 +1240,7 @@ background: rgba(0, 0, 0, 0.3);
     display: none;
   }
 
-  .navbar-custom .navbar-brand  {
-    padding: 0 0 0 15px;
+  .navbar-collapse .in {
+    background: none;
   }
 }
