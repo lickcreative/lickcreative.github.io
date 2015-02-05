@@ -12,7 +12,7 @@ html, body{
 
 body {
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova W01 Thin Regular', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
   color: #fff;
@@ -384,9 +384,7 @@ ul.unstyled {
 .section-heading h2{
 	font-size:46px;
 	padding:40px 0;
-	letter-spacing: -1px;
-/* 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
- */}
+}
 
 
 @media (max-width:767px) {
@@ -1137,8 +1135,9 @@ Lick additions
 /* Change nav/headings to Novecento */
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Novecento Sans W01 Wd Md', Helvetica, sans-serif;
+  font-family: 'Novecento Sans W01 Wd Lt', Helvetica, sans-serif;
   text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 ul.nav {
@@ -1146,6 +1145,13 @@ ul.nav {
   font-size: 18px;
   text-transform: uppercase;
   text-align: right;
+}
+
+/* Larger text for About paragraph */
+
+.bigText {
+  font-size: 26px;
+  line-height: 1.7;
 }
 
 /* Container for black behind text */
