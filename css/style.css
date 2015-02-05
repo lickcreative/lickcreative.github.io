@@ -276,13 +276,12 @@ ul.unstyled {
 	width:32px;
 }
 
-/*.top-nav-collapse {
-	background-color:rgba(0,0,0,0.6);
-	padding:5px 0;
-	-webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}*/
+.top-nav-collapse {
+	background-color:rgba(0,0,0,0.8);
+	-webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
 
 
 @media (max-width: 767px) {
