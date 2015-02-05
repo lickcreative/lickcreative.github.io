@@ -1196,7 +1196,20 @@ video.bgvid {
 /* Modal style overrides */
 
 .in {
-background: rgba(0, 0, 0, 0.7);
+background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Mobile nav menu styles */
+
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* Media queries for removing space at top and showing mobile video*/
