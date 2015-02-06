@@ -654,48 +654,125 @@ a:hover .img-overlay {
 	Contact
 ====================================================*/
 
+.contact-box {
+  text-align:center;
+}
+
+.contact-box i{
+  font-size:26px;
+  padding:20px 0;
+  color:#ED0971;
+}
+
+.contact-box h4{
+  margin-bottom:20px;
+}
+
 
 /* unstyled */
 
 ul.unstyled {
-	list-style:none;
-	padding:0;
-	margin:0;
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
 ul.unstyled li{
-	padding:5px 0;
+  padding:5px 0;
 }
 
 ul.unstyled i{
-	margin-right:20px;
+  margin-right:20px;
 }
 
 
 /* Social Link */
 
-ul.social-link {
-	list-style:none;
-	padding:0;
-	margin:0;
+/* ul.social-link {
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
 ul.social-link li{
-	display:inline-block;
-	padding:10px 20px 10px 0;
+  display:inline-block;
+  padding:10px 20px 10px 0;
 }
 
 ul.social-link li a{
-	color:#fff;
-	opacity:0.5;
+  color:#fff;
+  opacity:0.5;
 }
 
 ul.social-link li a:hover{
-	opacity:1;
+  opacity:1;
 }
 
 ul.social-link li a i{
-	font-size:30px;
+  font-size:30px;
+} */
+
+/* =============================
+  Social Link
+================================ */
+
+.social  ul, .social  ul  li {
+  margin:0;
+  padding: 0;
+}
+
+.social li  a {
+  display: inline-block;
+  height:50px;
+  width: 50px;
+  line-height: 65px;
+  text-align: center;
+  color: #fff;
+  transition: background 300ms, color 300ms;
+  -webkit-transition: background 300ms, color 300ms;
+}
+
+.social li:hover  a {
+  color: #fff;
+  border-color: transparent;
+}
+
+.social li a i {
+  font-size:30px;
+}
+
+.social li  a.rss:hover {
+  background: #ff9900;
+}
+.social li  a.facebook:hover {
+  background: #3B5998;
+}
+.social li  a.twitter:hover {
+  background: #1dcaff;
+}
+.social li  a.plus:hover {
+  background: #dd4b39;
+}
+.social li  a.vk:hover {
+  background: #3f628a;
+}
+.social li  a.pinterest:hover {
+  background: #c92026;
+}
+.social li  a.vimeo:hover {
+  background: #446d82;
+}
+.social li  a.github:hover {
+  background: #657e8c;
+}
+.social li  a.linkedin:hover {
+  background: #0c7bb3;
+}
+.social li  a.dropbox:hover {
+  background: #4fa3e3;
+}
+.social li  a.youtube:hover {
+  background: #ed413e;
 }
 
 
