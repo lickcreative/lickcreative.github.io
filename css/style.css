@@ -1220,7 +1220,7 @@ background: rgba(0,0,0,.8);
 
 /* Mobile menu transitions */
 
-.collapsing {
+.navbar-collapse .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1235,6 +1235,7 @@ background: rgba(0,0,0,.8);
           transition-property: height, visibility;
   /* activates hardware acceleration on iOS */
   -webkit-transform: translate3d(0,0,0);
+}
 
 /* Media queries for removing space at top and showing mobile video*/
 
