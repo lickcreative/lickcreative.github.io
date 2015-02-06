@@ -1175,9 +1175,9 @@ video.bgvid {
   opacity: .5;
 }
 
-/* #pausebutton, #mutebutton {
+#pausebutton, #mutebutton {
   width: 3em;
-} */
+}
 
 /* Remove bullets from contact form error text */
 
