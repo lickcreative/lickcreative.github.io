@@ -1214,7 +1214,11 @@ Lick additions
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Novecento Sans W01 Wd Lt', Helvetica, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
+}
+
+h1,h2 {
+  letter-spacing: 10px;
 }
 
 ul.nav {
