@@ -1699,4 +1699,15 @@ a:hover .vid-overlay {
   .navbar-collapse .in {
     background: none;
   }
+
+  .modal-header {
+    padding: 50px 10px 10px 10px;
+  }
+
+  .modal-body {
+    padding: 10px 0;
+  }
+  .modal-paragraph {
+    padding: 20px 0 10px;
+  }
 }
