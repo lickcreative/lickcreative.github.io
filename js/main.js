@@ -38,7 +38,7 @@ $(function() {
 
 
 // ****************************************************************
-// owl-caurosel
+// owl-carousel
 // ****************************************************************
 
 $(document).ready(function() {
@@ -225,4 +225,47 @@ $(function() {
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
     $('#success').html('');
+});
+
+// **************************************
+// Pause button for bg video
+// **************************************
+
+var vid = document.getElementById("bgvid");
+var pauseButton = document.getElementById("pausebutton");
+var pauseIcon = document.getElementById("pauseicon");
+function vidFade() {
+vid.classList.add("stopfade");
+}
+vid.addEventListener('ended', function() {
+// only functional if "loop" is removed
+vid.pause();
+// to capture IE10
+vidFade();
+});
+pauseButton.addEventListener("click", function() {
+vid.classList.toggle("stopfade");
+if (vid.paused) {
+vid.play();
+//change button icon
+pauseIcon.classList.remove("fa-play");
+pauseIcon.classList.add("fa-pause");
+<!-- pauseButton.innerHTML = ""; -->
+} else {
+vid.pause();
+pauseIcon.classList.remove("fa-pause");
+pauseIcon.classList.add("fa-play");
+<!-- pauseButton.innerHTML = ""; -->
+}
+})
+
+
+// **************************************
+// Collapse mobile menu on click
+// **************************************
+
+$(document).on('click','.navbar-collapse.in',function(e) {
+if( $(e.target).is('a') ) {
+		$(this).collapse('hide');
+	}
 });

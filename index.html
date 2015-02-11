@@ -15,14 +15,14 @@
 		<!-- Novecento title font -->
 		<link rel="stylesheet" type="text/css" href="http://fast.fonts.net/cssapi/2edc9aa7-f6eb-406f-b912-574c483d11d9.css"/>
 		<!-- Animate -->
-		<link href="css/animate/animate.css" rel="stylesheet">
+		<!-- <link href="css/animate/animate.css" rel="stylesheet"> -->
 		<!-- Fontawesome-->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<!-- Owl Carousel -->
-		<link href="css/owl-carousel/owl.carousel.css" rel="stylesheet">
-		<link href="css/owl-carousel/owl.theme.css" rel="stylesheet">
+		<!-- <link href="css/owl-carousel/owl.carousel.css" rel="stylesheet"> -->
+		<!-- <link href="css/owl-carousel/owl.theme.css" rel="stylesheet"> -->
 		<!-- Magnific Popup -->
-		<link href="css/magnific-popup/magnific-popup.css" rel="stylesheet" >
+		<!-- <link href="css/magnific-popup/magnific-popup.css" rel="stylesheet" > -->
 		<!-- Main-Style -->
 		<link href="css/style.css" rel="stylesheet">
 
@@ -74,7 +74,7 @@
 									<i class="fa fa-pause" id="pauseicon"></i>
 								</button>
 								<button type="button" class="btn btn-custom" id="mutebutton">
-									<i class="fa fa-volume-off" id="muteicon"></i>
+									<i class="fa fa-volume-up" id="muteicon"></i>
 								</button>
 							</div><!-- ./btn-group -->
 						</div><!-- ./navbar-right -->
@@ -132,7 +132,7 @@
 
 
 		<!-- Work -->
-		<div id="featured" class="fullSection">
+		<div id="featured" class="fullSection wow fadeInDown showdelay2">
 			<div class="container">
 
 				<div class="section-heading">
@@ -140,7 +140,7 @@
 				</div>
 
 				<!-- Work-list -->
-				<div id="featured-list" class="owl-carousel  wow fadeInUp showdelay2">
+				<div id="featured-list" class="owl-carousel">
 
 					<div class="featured-box item text-center">
 						<a href="#" data-toggle="modal" data-target="#featured-modal">
@@ -207,10 +207,14 @@
 					  </div>
 					  <div class="modal-body">
 							<!-- <h3 class="text-center">Planes 2 AR</h3> -->
-							<div class="embed-responsive embed-responsive-16by9">
-								<video controls src="images/lick-planes2-mobile.mp4" poster="images/planes2.jpg" class=""></video>
+							<div class="col-md-9">
+								<div class="embed-responsive embed-responsive-16by9">
+									<video controls src="images/lick-planes2-mobile.mp4" poster="images/planes2.jpg" class=""></video>
+								</div>
 							</div>
-							<p><!-- <img class="img-responsive img-full" src="images/img2.jpg" alt=""/> <-->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad aliquid impedit necessitatibus nesciunt voluptatem qui suscipit accusamus blanditiis velit. Maxime voluptatibus repellendus eum alias adipisci velit ea atque facilis!</--></p>
+							<div class="col-md-3">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad aliquid impedit necessitatibus nesciunt voluptatem qui suscipit accusamus blanditiis velit. Maxime voluptatibus repellendus eum alias adipisci velit ea atque facilis!</p>
+							</div>
 							<!-- <hr>
 							<h3>Left image with details</h3>
 							<p><img class="img-responsive pull-left" src="images/img1.jpg" alt=""/>about section Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper diam nec augue semper, in dignissim elit hendrerit. Quisque tempus arcu vulputate metus convallis elementum. Aenean rhoncus rutrum quam ut semper. Fusce ut eros quis metus ullamcorper commodo ut sit amet nisi. Cras mattis enim eu urna tristique posuere. In vitae adipiscing nulla. Phasellus purus eros, aliquam ac urna eget, dictum consequat turpis. Aliquam hendrerit odio ut placerat pharetra. Etiam quis auctor sapien. Praesent sed consectetur lorem, et gravida purus.
@@ -249,7 +253,7 @@
 
 
 		<!-- team -->
-		<div id="team" class="fullSection wow fadeInUp showdelay2">
+		<div id="team" class="fullSection wow fadeInDown showdelay2">
 			<div class="container">
 
 				<div class="section-heading">
@@ -282,6 +286,8 @@
 										<div class="img-overlay"></div>
 								</a>
 						</div>
+					</div>
+					<div class="row wow fadeInDown showdelay2">
 						<div class="col-lg-3 col-md-4 col-xs-6 teamImg">
 								<a class="" href="#">
 										<img class="img-responsive" src="images/Team/Claire.jpg" alt="">
@@ -306,6 +312,8 @@
 										<div class="img-overlay"></div>
 								</a>
 						</div>
+					</div>
+					<div class="row wow fadeInDown showdelay2">
 						<div class="col-lg-3 col-md-4 col-xs-6 teamImg">
 								<a class="" href="#">
 										<img class="img-responsive" src="images/Team/Luci.jpg" al	t="">
@@ -330,6 +338,7 @@
 										<div class="img-overlay"></div>
 								</a>
 						</div>
+					</div>
 						<!-- <div class="col-lg-3 col-md-4 col-xs-6 teamImg">
 								<a class="" href="#">
 										<img class="img-responsive" 	src="images/Team/Spencer.jpg" alt="	">
@@ -343,7 +352,7 @@
 		<!-- ./team -->
 
 		<!-- contact -->
-		<div id="contact" class="fullSection">
+		<div id="contact" class="fullSection wow fadeInDown showdelay2">
 			<div class="container">
 
 				<div class="section-heading">
@@ -355,7 +364,7 @@
 			</div>
 
 
-				<div class="wow fadeInUp showdelay2">
+				<div class="wow fadeInDown showdelay2">
 
 					<div class="row">
 						<div class="contact-info">
@@ -489,7 +498,7 @@
 
 
 		<!-- Pause button for background video -->
-		<script>
+		<!-- <script>
 
 		var vid = document.getElementById("bgvid");
 		var pauseButton = document.getElementById("pausebutton");
@@ -510,26 +519,26 @@
 		//change button icon
 		pauseIcon.classList.remove("fa-play");
 		pauseIcon.classList.add("fa-pause");
-		<!-- pauseButton.innerHTML = ""; -->
+		pauseButton.innerHTML = "";
 		} else {
 		vid.pause();
 		pauseIcon.classList.remove("fa-pause");
 		pauseIcon.classList.add("fa-play");
-		<!-- pauseButton.innerHTML = ""; -->
+		pauseButton.innerHTML = "";
 		}
 		})
 
-		</script>
+		</script> -->
 
 		<!-- Collapse mobile nav menu on click -->
-		<script>
-			$(document).on('click','.navbar-collapse.in',function(e) {
-			if( $(e.target).is('a') ) {
-					$(this).collapse('hide');
+		<!-- <script>
+			\$(document).on('click','.navbar-collapse.in',function(e) {
+			if( \$(e.target).is('a') ) {
+					\$(this).collapse('hide');
 				}
 			});
 
-	</script>
+			</script> -->
 
 	</body>
 </html>
