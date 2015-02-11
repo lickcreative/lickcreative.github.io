@@ -269,3 +269,13 @@ if( $(e.target).is('a') ) {
 		$(this).collapse('hide');
 	}
 });
+
+// **************************************
+// Pause videos on modal close
+// **************************************
+
+$(document).ready(function(){
+	$('body').on('hidden.bs.modal', '.modal', function () {
+	$('video').trigger('pause');
+	});
+});
