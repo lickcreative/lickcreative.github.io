@@ -1579,7 +1579,7 @@ video.bgvid {
 background: rgba(0,0,0,.8);
 }
 
-#featured-modal .modal-dialog {
+.modal-dialog {
   width:100%;
 }
 
