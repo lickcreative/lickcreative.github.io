@@ -1328,3 +1328,20 @@ footer {
   padding-right: 5px;
   padding-left: 5px;
 }
+
+.btn-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-group > .btn {
+  position: relative;
+  float: left;
+}

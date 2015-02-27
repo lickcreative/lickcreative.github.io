@@ -8,22 +8,23 @@
 
   <title>Lick Creative</title>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <!-- Favicon
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <!-- Styles
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="jquery.fullPage.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="skeleton.css" />
 
-  <!-- Fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <!-- Fonts
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- Novecento title -->
-  <link rel="stylesheet" type="text/css"
- href="http://fast.fonts.net/cssapi/2edc9aa7-f6eb-406f-b912-574c483d11d9.css"/>
- <!-- Proxima Nova body -->
- <link href="http://fonts.googleapis.com/css?family=Proxima+Nova:300,400,600,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://fast.fonts.net/cssapi/2edc9aa7-f6eb-406f-b912-574c483d11d9.css"/>
+  <!-- Proxima Nova body -->
+  <link href="http://fonts.googleapis.com/css?family=Proxima+Nova:300,400,600,800" rel="stylesheet" type="text/css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
  <!-- Javascript
  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -86,6 +87,7 @@
 <header class="">
 <nav id="nav" class="nav-down"role="navigation">
   <div class="container">
+
     <a href="#Home" class="lick-logo"><img src="images/logo.png" alt="Lick Logo"></a>
 
     <!-- Button to trigger mobile overlay -->
@@ -102,6 +104,19 @@
         <li data-menuanchor="Team"><a href="#Team">Team</a></li>
         <li data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
     </ul>
+
+    <!-- Button group for play/pause/mute -->
+						<div class="btn-wrapper">
+							<div class="btn-group navbuttons" role="group">
+								<button type="button" class="" id="pausebutton">
+									<span class="fa fa-pause" id="pauseicon"></span>
+								</button>
+								<button type="button" class="" id="mutebutton">
+									<span class="fa fa-volume-up" id="muteicon"></span>
+								</button>
+							</div><!-- ./btn-group -->
+						</div><!-- ./navbar-right -->
+
 </nav>
 
 </header>
