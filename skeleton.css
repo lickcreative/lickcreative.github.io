@@ -461,7 +461,7 @@ th {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
   box-sizing: border-box;
   }
 .column,
@@ -565,6 +565,7 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Novecento Sans W01 Wd Lt', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
@@ -1347,7 +1348,7 @@ footer {
 }
 
 #pausebutton, #mutebutton {
-  width: 3em;
+  width: 2.5rem;
   padding: 0;
 }
 
