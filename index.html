@@ -24,7 +24,7 @@
   <!-- Proxima Nova body -->
   <link href="http://fonts.googleapis.com/css?family=Proxima+Nova:300,400,600,800" rel="stylesheet" type="text/css">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
  <!-- Javascript
  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -108,11 +108,11 @@
     <!-- Button group for play/pause/mute -->
 						<div class="btn-wrapper">
 							<div class="btn-group navbuttons" role="group">
-								<button type="button" class="" id="pausebutton">
-									<span class="fa fa-pause" id="pauseicon"></span>
+								<button type="button" id="pausebutton">
+									<i class="fa fa-pause" id="pauseicon"></i>
 								</button>
-								<button type="button" class="" id="mutebutton">
-									<span class="fa fa-volume-up" id="muteicon"></span>
+								<button type="button" id="mutebutton">
+									<i class="fa fa-volume-up" id="muteicon"></i>
 								</button>
 							</div><!-- ./btn-group -->
 						</div><!-- ./navbar-right -->
@@ -156,8 +156,51 @@
         <div class="slide" id="slide1">
           <div class="container">
             <h2>Our Work</h2>
-            <p class="work-text">We ideate, design and deliver digital products and services that connect and engage. Our multi-disciplinary team develop immersive consumer experiences across multiple industries. We collaborate with our clients, supplying the thinking behind the content that satisfies audience needs and surpasses business goals</p>
-        </div>
+            <!-- <p class="work-text">We ideate, design and deliver digital products and services that connect and engage. Our multi-disciplinary team develop immersive consumer experiences across multiple industries. We collaborate with our clients, supplying the thinking behind the content that satisfies audience needs and surpasses business goals</p> -->
+            <div class="row">
+
+              <div class="three columns">
+                <a href="#Work/1">
+                  <figure>
+                    <img class="img-responsive" src="images/disney.jpg" alt="">
+                    <figcaption>
+                      <!-- <h5>Planes 2</h5> -->
+                    </figcaption>
+                </figure>
+              </a>
+              </div>
+
+              <div class="three columns">
+                <figure>
+                  <img src="images/paramount.jpg" alt="" class="img-responsive">
+                  <figcaption>
+                    <!-- <h5>Transformers 4</h5> -->
+                    </figcaption>
+                </figure>
+              </div>
+
+              <div class="three columns">
+                <figure>
+                  <img src="images/tesco.jpg" alt="" class="img-responsive">
+                  <figcaption>
+                    <!-- <h5>Tesco</h5> -->
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="three columns">
+                  <figure>
+                    <img src="images/adidas.jpg" alt="" class="img-responsive">
+                    <figcaption>
+                      <!-- <h5>Adidas</h5> -->
+                    </figcaption>
+                  </figure>
+              </div>
+
+            </div><!-- ./row -->
+
+        </div><!-- ./container -->
+
           <div class="slide" id="slide2">
             <h3>Planes 2</h3>
           </div>
@@ -471,12 +514,12 @@ s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
 		//change button icon
 		pauseIcon.classList.remove("fa-play");
 		pauseIcon.classList.add("fa-pause");
-		pauseButton.innerHTML = "";
+		//pauseButton.innerHTML = "";
 		} else {
 		vid.pause();
 		pauseIcon.classList.remove("fa-pause");
 		pauseIcon.classList.add("fa-play");
-		pauseButton.innerHTML = "";
+		//pauseButton.innerHTML = "";
 		}
 		})
 

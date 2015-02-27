@@ -474,7 +474,7 @@ th {
 @media (min-width: 25em) {
   .container {
     width: 85%;
-    padding: 0; }
+    padding: 0 0 50px 0; }
 }
 
 /* For devices larger than 34.375em */
@@ -1344,4 +1344,13 @@ footer {
 .btn-group > .btn {
   position: relative;
   float: left;
+}
+
+#pausebutton, #mutebutton {
+  width: 3em;
+  padding: 0;
+}
+
+.columns figure {
+  margin: 0;
 }
