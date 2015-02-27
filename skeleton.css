@@ -57,6 +57,8 @@ progress,
 video {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
+  width: 100%;
+  height: auto;
 }
 
 /**
@@ -209,7 +211,6 @@ figure {
  */
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -355,9 +356,7 @@ input[type="number"]::-webkit-outer-spin-button {
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
+  -webkit-appearance: textfield; /* 1 */ /* 2 */
   box-sizing: content-box;
 }
 
@@ -459,7 +458,7 @@ th {
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
@@ -645,6 +644,25 @@ input[type="reset"]:focus,
 input[type="button"]:focus {
   border-color: #f06;
   outline: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+          transition: all 0.4s ease-in-out 0s;
+  }
+
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  border-color: #f06;
+  background-color: #f06;
+  outline: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+          transition: all 0.4s ease-in-out 0s;
   }
 
 .button.button-primary,
@@ -670,6 +688,8 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #B80049;
   border-color: #B80049;
+  -webkit-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s;
   }
 
 
@@ -947,7 +967,8 @@ there.
 	height: 60%;
 	font-size: 54px;
 	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	    transform: translateY(-50%);
 }
 
 .overlay ul {
@@ -1058,7 +1079,8 @@ there.
       width: 100%;
       height: 40px;
       z-index: 70;
-      transition: top 0.2s ease-in-out;
+      -webkit-transition: top 0.2s ease-in-out;
+              transition: top 0.2s ease-in-out;
     }
 
     #menu {
@@ -1087,10 +1109,14 @@ there.
 
     #menu li.active a:hover {
       color: #f06;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+              transition: all 0.4s ease-in-out 0s;
     }
 
-    #menu li:hover {
+    #menu a:hover {
       color: #f06;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+              transition: all 0.4s ease-in-out 0s;
     }
 
     #menu li a,
@@ -1134,8 +1160,40 @@ there.
   z-index: -999;
   background: url(bg.jpg) no-repeat;
   background-size: cover;
-  transition: 1s opacity;
-  object-fit: cover;
+  -webkit-transition: 1s opacity;
+          transition: 1s opacity;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* No object-fit support: */
+  @media (min-aspect-ratio: 16/9) {
+    .bgvid {
+        height: 300%;
+        top: -100%;
+    }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .bgvid {
+        width: 300%;
+        left: -100%;
+    }
+  }
+
+/* If browser supports object-fit */
+
+@supports (object-fit: cover) {
+  .bgvid {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.stopfade {
+  opacity: .5;
 }
 
 /* Page indicator styles */
@@ -1219,10 +1277,8 @@ img-responsive {
     	right: 0;
     	top: 0;
       -webkit-transition: all 300ms;
-    	-moz-transition: all 300ms;
     	transition: all 300ms;
     	-webkit-transition-delay: 50ms;
-    	-moz-transition-delay: 50ms;
     	transition-delay: 50ms;
     	z-index: 1;
     }
@@ -1238,7 +1294,6 @@ img-responsive {
 		.g img {
 			display: block;
       -webkit-transition: all 300ms;
-	    -moz-transition: all 300ms;
 	    transition: all 300ms;
 		}
 
@@ -1293,12 +1348,11 @@ img-responsive {
 .contact-icon:hover {
   fill: #f06;
   -webkit-transition: all 200ms;
-  -moz-transition: all 200ms;
   transition: all 200ms;
   -webkit-transition-delay: 25ms;
-  -moz-transition-delay: 25ms;
   transition-delay: 25ms;
-  transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .contact-box {
