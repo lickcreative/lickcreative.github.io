@@ -1409,3 +1409,63 @@ footer {
 .columns figure {
   margin: 0;
 }
+
+/* Calendar body */
+
+.calendar-body {
+  background: url(images/bulbs-web.jpg) no-repeat center center fixed;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bulbs-web.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bulbs-web.jpg', sizingMethod='scale')";
+  min-width: 100%;
+  min-height: 100%
+}
+
+.img-question {
+  display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;
+  -webkit-box-pack: center;  -webkit-justify-content: center;  -ms-flex-pack: center;  justify-content: center;
+}
+
+/* Scroll down animation */
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100%   { -webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0); }
+  40%                       { -webkit-transform: translateY(-15px);-ms-transform: translateY(-15px);transform: translateY(-15px); }
+  60%                       { -webkit-transform: translateY(-10px);-ms-transform: translateY(-10px);transform: translateY(-10px); }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100%   { -webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0); }
+  40%                       { -webkit-transform: translateY(-15px);-ms-transform: translateY(-15px);transform: translateY(-15px); }
+  60%                       { -webkit-transform: translateY(-10px);-ms-transform: translateY(-10px);transform: translateY(-10px); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100%   { -webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0); }
+  40%                       { -webkit-transform: translateY(-15px);-ms-transform: translateY(-15px);transform: translateY(-15px); }
+  60%                       { -webkit-transform: translateY(-10px);-ms-transform: translateY(-10px);transform: translateY(-10px); }
+}
+
+.arrow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  fill: rgba(255,255,255,.5);
+}
+
+.bounce {
+  -webkit-animation: bounce 1.5s infinite;
+  animation: bounce 1.5s infinite;
+}
+
+.big-answer {
+  font-family: 'Novecento Sans W01 Wd Lt','Proxima Nova W01 Thin Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-size: 3rem;
+  color: #f06;
+  line-height: 1;
+}
+
+section.calendar {
+  padding: 20px 0;
+  height: 100%;
+}

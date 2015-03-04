@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lick Creative</title>
+
+ <!-- Favicon
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+ <!-- Styles
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="skeleton.css" />
+
+ <!-- Fonts
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Novecento title -->
+  <link rel="stylesheet" type="text/css" href="http://fast.fonts.net/cssapi/2edc9aa7-f6eb-406f-b912-574c483d11d9.css"/>
+  <!-- Proxima Nova body -->
+  <link href="http://fonts.googleapis.com/css?family=Proxima+Nova:300,400,600,800" rel="stylesheet" type="text/css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+ <!-- Javascript
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body class="calendar-body">
+
+<!-- Nav Bar
+––––––––––––––––––––––––––––––––––––––––––––––––––-->
+
+
+<!-- Question section
+––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<section class="calendar" id="question">
+<div class="container">
+  <img src="images/march-question-2.svg" alt="What percentage of retailers in the USA will have beacons installed by the end of 2015?" class="img-question">
+  <a href="#answer">
+    <svg class="arrow bounce" viewBox="0 0 50 50">
+        <path d="M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z"/>
+        <path d="M0-.75h48v48h-48z" fill="none"/>
+    </svg>
+  </a>
+</div><!-- ./container -->
+</section>
+
+<!-- ./question -->
+
+<!-- Answer section
+––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<section class="calendar section" id="answer">
+  <div class="container">
+    <h2>March</h2>
+    <div class="eight offset-by-two columns">
+      <p><span class="big-answer">52%</span> of the top 100 US retailers are testing beacons in stores this year.</p>
+      <p>A recent report finds that these small devices are the fastest-growing in-store technology since mobile card readers. The beacon install-base will see triple digit growth over the next few years.</p>
+      <p>Source: the <a href="http://example.com">Beacons Report</a>, Business Insider UK 2014</p>
+    </div>
+  </div>
+</section>
+
+<!-- ./answer -->
+
+<!-- Glossary section
+––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<section class="calendar section" id="glossary">
+  <div class="container">
+    <h2>Glossary</h2>
+    <div class="eight offset-by-two columns">
+      <p>Beacons are "Bluetooth Smart" devices each emitting a unique code. They are battery powered, lasting around 2 years, and have a range of up to 50m. If the unique code is embedded within an app and someone with that app installed on their Bluetooth enabled phone enters the predetermined range their phone will recognise the beacon and can send the user a notification or perform an action.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ./glossary -->
+
+<script>
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+</script>
+
+</body>
+
+</html>
