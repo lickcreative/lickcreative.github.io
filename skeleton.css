@@ -1471,4 +1471,10 @@ section.calendar {
 }
 
 .calendar-contact {
+  text-align: center;
+}
+
+.calendar-logo {
+  max-width: 100%;
+  margin: 0 0 60px 25%;
 }
