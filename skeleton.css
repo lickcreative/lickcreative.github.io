@@ -1413,12 +1413,13 @@ footer {
 /* Calendar body */
 
 .calendar-body {
-  background: url(images/bulbs-web.jpg) no-repeat center center fixed;
+  background: url(images/bulbs-web-darker.jpg) no-repeat center center fixed;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bulbs-web.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bulbs-web.jpg', sizingMethod='scale')";
   min-width: 100%;
   min-height: 100%
+  z-index: -100;
 }
 
 .img-question {
