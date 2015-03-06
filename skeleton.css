@@ -1056,11 +1056,40 @@ there.
   display: none;
 }
 
+/* Video controls */
+
+.btn-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-group > .btn {
+  position: relative;
+  float: left;
+}
+
+#pausebutton, #mutebutton {
+  width: 2.5rem;
+  padding: 0;
+  display: none;
+}
+
 /* Larger than phablet */
 @media (min-width: 46.875em) {
 
   #trigger-overlay {
     display: none;
+  }
+
+  #pausebutton, #mutebutton {
+    display: inherit;
   }
 
   .lick-logo {
@@ -1382,28 +1411,6 @@ footer {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
-}
-
-.btn-wrapper {
-    position: absolute;
-    top: 15px;
-    right: 0;
-}
-
-.btn-group {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.btn-group > .btn {
-  position: relative;
-  float: left;
-}
-
-#pausebutton, #mutebutton {
-  width: 2.5rem;
-  padding: 0;
 }
 
 .columns figure {
