@@ -1165,7 +1165,7 @@ there.
 
 /* Transparent background */
 .section {
-  background: rgba(0,0,0,.85);
+  background: rgba(0,0,0,.8);
   padding-top: 50px;
 }
 
