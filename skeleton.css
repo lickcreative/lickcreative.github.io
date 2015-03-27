@@ -1484,5 +1484,7 @@ section.calendar {
 
 .calendar-logo {
   max-width: 100%;
-  margin: 0 0 60px 25%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
 }
