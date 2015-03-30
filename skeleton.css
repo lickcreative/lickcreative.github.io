@@ -1516,3 +1516,8 @@ section.calendar {
   display: block;
   margin: 40px auto;
 }
+
+.home {
+  background: rgba(0,0,0,0);
+  height: 100vh !important;
+}
