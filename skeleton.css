@@ -1439,10 +1439,13 @@ footer {
   margin: 0;
 }
 
+@media screen and (max-width: 46.875em) {
+
 .fp-section,
 .fp-slide,
 .fp-tableCell{
     height: auto !important;
+}
 }
 
 /* Calendar body */
