@@ -46,12 +46,12 @@
         navigation: true,
         navigationPosition: 'right',
         //navigationTooltips: ['Home', 'About', 'Work', 'Team', 'Contact'],
-        slidesNavigation: true,
+        slidesNavigation: false,
         menu: '#nav',
 
         //Design
         controlArrows: true,
-        verticalCentered: true,
+        verticalCentered: false,
         responsive: 900,
         resize: false,
 
@@ -84,14 +84,14 @@
 
 <!-- Nav Bar
 ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-<header class="">
+<header>
 <nav id="nav" class="nav-down"role="navigation">
   <div class="container">
 
     <a href="#Home" class="lick-logo"><img src="images/logo.png" alt="Lick Logo"></a>
 
     <!-- Button to trigger mobile overlay -->
-    <button id="trigger-overlay">
+    <button id="trigger-overlay" class="button--mmenu">
       <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="48" height="48" viewBox="0 0 48 48">
           <path d="M0 0h48v48h-48z" fill="none"/>
           <path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"/>
@@ -125,17 +125,22 @@
 
 <!-- Background video
 ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-  <video muted loop id="bgvid" class="bgvid">
-          <source src="images/lick.webm" type="video/webm">
-          <source src="images/lick.mp4" type="video/mp4">
-  </video>
+<video muted loop id="bgvid" class="bgvid">
+        <source src="images/lick.webm" type="video/webm">
+        <source src="images/lick.mp4" type="video/mp4">
+</video>
 <!-- ./Background video -->
 
 <div id="fullpage"> <!-- everything inside div container controlled by fullpage.js -->
 
-<!-- Empty home section makes space for bg video
+<!-- Home section shows normal vid on small screens
+and is empty on larger ones to leave space for bg vid
 ––––––––––––––––––––––––––––––––––––––––––––––––––-->
-    <div class="section home" data-anchor="Home">
+<div class="section home" data-anchor="Home">
+  <video muted controls id="mobilevid" class="home-video_mobile">
+          <source src="images/lick.webm" type="video/webm">
+          <source src="images/lick.mp4" type="video/mp4">
+  </video>
     </div>
 <!-- ./Home -->
 
@@ -556,9 +561,10 @@ s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
 
 <!-- Menu overlay for mobile -->
 <div class="overlay overlay-hugeinc">
-  <button type="button" class="overlay-close">Close</button>
+  <!-- <button type="button" class="overlay-close">Close</button> -->
   <nav id="mobile-overlay">
     <ul>
+      <li data-menuanchor="Home"><a href="#Home">Home</a></li>
       <li data-menuanchor="About"><a href="#About">About</a></li>
       <li data-menuanchor="Work"><a href="#Work">Work</a></li>
       <li data-menuanchor="Team"><a href="#Team">Team</a></li>
