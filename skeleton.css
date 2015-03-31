@@ -551,12 +551,12 @@ html {
   }
 body {
   background-color: #000;
-  font-size: 1.25em; /* 20px/16px = 1/25 */
+  font-size: 1.25em; /* 20px/16px = 1.25em */
   line-height: 1.4;
   font-weight: 400;
   font-family: 'Proxima Nova W01 Thin Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* makes Chrome render font much lighter (body was way too heavy) */
 }
 
 
@@ -907,9 +907,20 @@ there.
 *  ––––––––––––– */
 
 
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- #Fullpage.js overrides
+- #Menu styles
+- #Background video
+- #Larger screen enhancements
+- #Section styles
+- #Images
+- #Contact styles
+- #Tesco Calendar styles
+*/
 
 
-/* Fullpage.js overrides
+/* #Fullpage.js overrides
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     /* Page indicator styles */
@@ -957,8 +968,7 @@ there.
       }
     }
 
-/* Mobile menu overlay courtesy of:
-/  http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
+/* #Menu styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     /* Nav bar */
@@ -995,6 +1005,9 @@ there.
     .menu-icon {
       fill: #fff;
     }
+
+  /* Mobile menu overlay courtesy of:
+     http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/ */
 
     /* Overlay style */
     .overlay {
@@ -1110,14 +1123,14 @@ there.
         top: -70px;
     }
 
-/* Desktop navbar styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+    /* Desktop navbar styles
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     #menu li {
       display: none;
     }
 
-/* Background video
+/* #Background video
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     .home-video_mobile {
@@ -1200,7 +1213,7 @@ there.
       display: none;
     }
 
-/* Larger screen enhancements
+/* #Larger screen enhancements
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     /* Larger than phablet */
@@ -1292,7 +1305,7 @@ there.
     }
 
 
-/* Section styles
+/* #Section styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     /* Transparent black section background */
@@ -1306,7 +1319,7 @@ there.
       height: 100vh !important;
     }
 
-/* Images
+/* #Images
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     img {
@@ -1420,7 +1433,7 @@ there.
     			}
     		}
 
-/* Contact styles
+/* #Contact styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     .contact-icon {
       fill: #fff;
@@ -1465,7 +1478,7 @@ there.
       padding-left: 5px;
     }
 
-/* Tesco Calendar styles
+/* #Tesco Calendar styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
     .calendar-body {
