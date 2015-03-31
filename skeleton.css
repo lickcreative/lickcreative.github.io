@@ -1048,23 +1048,15 @@ there.
 	transform: translateY(25%) rotateX(-35deg);
 }
 
-/* @media screen and (max-height: 30.5em) {
-  .overlay nav {
-    height: 70%;
-    font-size: 34px;
-  }
-  .overlay ul li {
-    min-height: 34px;
-  }
-} */
-
-/* Desktop navbar styles */
+/* Desktop navbar styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #menu li {
   display: none;
 }
 
-/* Background video */
+/* Background video
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .home-video_mobile {
 
@@ -1146,23 +1138,26 @@ there.
   display: none;
 }
 
+/* Larger screen enhancements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /* Larger than phablet */
 @media (min-width: 46.875em) {
 
   .button--mmenu {
-    display: none;
+    display: none; /* Hide mobile menu trigger button */
   }
 
   .bgvid {
-    display: inline-block;
+    display: inline-block; /* show background video */
   }
 
   .home-video_mobile {
-      display: none;
+      display: none; /* hide inline mobile video (replaced by bgvid) */
     }
 
   #pausebutton, #mutebutton {
-    display: inherit;
+    display: inherit; /* show background video controls */
   }
 
   .lick-logo {
@@ -1175,6 +1170,7 @@ there.
       height: auto;
     }
 
+    /* main navbar styles */
     #nav {
       position: fixed;
       top: 0;
@@ -1185,6 +1181,7 @@ there.
               transition: top 0.2s ease-in-out;
     }
 
+    /* nav menu styles */
     #menu {
       padding: 0 0 0 50px;
       margin: 10px;
@@ -1232,11 +1229,12 @@ there.
     }
 }
 
+/* assigned by javascript to shift nav up when user scrolls on mobile */
 .nav-up {
     top: -70px;
 }
 
-/* Transparent background */
+/* Transparent black section background */
 .section {
   background: rgba(0,0,0,.8);
   padding-top: 50px;
@@ -1294,22 +1292,22 @@ img {
   display: block;
 }
 
-/* Team image thumbnails */
+/* Team image thumbnail grid */
 
-.g {
+.team_grid {
   		padding: 0;
 			overflow: hidden;
       list-style: none;
 		}
 
-		.g li {
+		.team_grid li {
 			float: left;
 			width: 50%;
 			padding: 0;
       margin: 0;
 		}
 
-    .g figure {
+    .team_grid figure {
 	    overflow: hidden;
     	position: relative;
       cursor: default;
@@ -1317,7 +1315,7 @@ img {
       padding: 0;
     }
 
-    .g figcaption {
+    .team_grid figcaption {
     	background: rgba(237,9,113,.6);
     	color: white;
     	height: 100%;
@@ -1334,7 +1332,7 @@ img {
     	z-index: 1;
     }
 
-        .g figcaption h3 {
+        .team_grid figcaption h3 {
           font-size: 1.1rem;
           line-height: 1;
           position: relative;
@@ -1342,50 +1340,50 @@ img {
           text-align: center;
         }
 
-		.g img {
+		.team_grid img {
 			display: block;
       -webkit-transition: all 300ms;
 	    transition: all 300ms;
 		}
 
-    .g figure:hover figcaption {
+    .team_grid figure:hover figcaption {
 	    opacity: 1;
     }
 
-		.g li:nth-child(odd) {
+		.team_grid li:nth-child(odd) {
 			clear: left;
 		}
 
 		@media screen and (min-width: 34.375em) {
-			.g li {
+			.team_grid li {
 		    	width: 33.3333333333333333%;
 		  	}
-		  	.g li:nth-child(3n+1) {
+		  	.team_grid li:nth-child(3n+1) {
 		  		clear: left;
 		  	}
-		  	.g li:nth-child(odd) {
+		  	.team_grid li:nth-child(odd) {
 				clear: none;
 			}
 		}
 		@media screen and (min-width: 46.875em) {
-			.g li {
+			.team_grid li {
 		    	width: 25%;
 		  	}
-		  	.g li:nth-child(4n+1) {
+		  	.team_grid li:nth-child(4n+1) {
 		  		clear: left;
 		  	}
-		  	.g li:nth-child(3n+1) {
+		  	.team_grid li:nth-child(3n+1) {
 				clear: none;
 			}
 		}
 		@media screen and (min-width: 62.5em) {
-			.g li {
+			.team_grid li {
 		    	width: 20%;
 		  	}
-		  	.g li:nth-child(5n+1) {
+		  	.team_grid li:nth-child(5n+1) {
 		  		clear: left;
 		  	}
-		  	.g li:nth-child(4n+1) {
+		  	.team_grid li:nth-child(4n+1) {
 				clear: none;
 			}
 		}
@@ -1439,6 +1437,7 @@ footer {
   margin: 0;
 }
 
+/* Overrides Fullpage absolute heights on mobile */
 @media screen and (max-width: 46.875em) {
 
 .fp-section,
