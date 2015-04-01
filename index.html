@@ -34,6 +34,12 @@
   <!-- <script src="/vendorsjquery.slimscroll.min.js" type="text/javascript" ></script> -->
   <script src="jquery.fullPage.min.js" type="text/javascript" ></script>
   <script src="modernizr.custom.js"></script>
+  <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+  </script>
+  <script src="picturefill.js" async></script>
+  <script src="/vendors/picturefill.min.js" async></script>
 
   <!-- Initial fullpage.js with options -->
   <script type="text/javascript">
@@ -88,15 +94,21 @@
 <nav id="nav" class="nav-down"role="navigation">
   <div class="container">
 
-    <a href="#Home" class="lick-logo"><img src="images/logo.png" alt="Lick Logo"></a>
+    <button href="#Home" class="lick-logo"><img src="images/logo.png" alt="Lick Logo"></a>
 
     <!-- Button to trigger mobile overlay -->
-    <button id="trigger-overlay" class="button--mmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="48" height="48" viewBox="0 0 48 48">
-          <path d="M0 0h48v48h-48z" fill="none"/>
-          <path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"/>
-      </svg>
+
+    <button class="lines-button x2" type="button" role="button" aria-label="Toggle Navigation" id="trigger-overlay">
+      <span class="lines"></span>
     </button>
+
+  <!--   <a id="trigger-overlay" class="button--mmenu navicon-button x">
+    <div class="navicon"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="48" height="48" viewBox="0 0 48 48">
+        <path d="M0 0h48v48h-48z" fill="none"/>
+        <path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z"/>
+    </svg>
+  </button> -->
 
     <ul id="menu" class="navMenu">
         <li data-menuanchor="About"><a href="#About">About</a></li>
@@ -573,8 +585,7 @@ s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
   </nav>
 </div>
 
-<script src="classie.js"></script>
-<script src="demo1.js"></script>
+<script src="mobile-menu.js"></script>
 
 <!-- Pause button for background video -->
 		<script>
@@ -612,43 +623,64 @@ s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
     <script>
 
     // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('nav').outerHeight();
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('nav').outerHeight();
 
-$(window).scroll(function(event){
-  didScroll = true;
-});
+        $(window).scroll(function(event){
+          didScroll = true;
+        });
 
-setInterval(function() {
-  if (didScroll) {
-      hasScrolled();
-      didScroll = false;
-  }
-}, 250);
+        setInterval(function() {
+          if (didScroll) {
+              hasScrolled();
+              didScroll = false;
+          }
+        }, 250);
 
-function hasScrolled() {
-  var st = $(this).scrollTop();
+        function hasScrolled() {
+          var st = $(this).scrollTop();
 
-  // Make sure they scroll more than delta
-  if(Math.abs(lastScrollTop - st) <= delta)
-      return;
+          // Make sure they scroll more than delta
+          if(Math.abs(lastScrollTop - st) <= delta)
+              return;
 
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight){
-      // Scroll Down
-      $('nav').removeClass('nav-down').addClass('nav-up');
-  } else {
-      // Scroll Up
-      if(st + $(window).height() < $(document).height()) {
-          $('nav').removeClass('nav-up').addClass('nav-down');
-      }
-  }
+          // If they scrolled down and are past the navbar, add class .nav-up.
+          // This is necessary so you never see what is "behind" the navbar.
+          if (st > lastScrollTop && st > navbarHeight){
+              // Scroll Down
+              $('nav').removeClass('nav-down').addClass('nav-up');
+          } else {
+              // Scroll Up
+              if(st + $(window).height() < $(document).height()) {
+                  $('nav').removeClass('nav-up').addClass('nav-down');
+              }
+          }
 
-  lastScrollTop = st;
-}
+          lastScrollTop = st;
+        }
+    </script>
+
+    <script>
+    //animates mobile menu icon into x on click
+      var anchor = document.querySelectorAll('#trigger-overlay');
+
+      [].forEach.call(anchor, function(anchor){
+        var open = false;
+        anchor.onclick = function(event){
+          event.preventDefault();
+          if(!open){
+            this.classList.add('close');
+            open = true;
+          }
+          else{
+            this.classList.remove('close');
+            open = false;
+          }
+        }
+      });
+
     </script>
 
 </body>
