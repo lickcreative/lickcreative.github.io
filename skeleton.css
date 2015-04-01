@@ -1047,8 +1047,8 @@ there.
       top: -0.71429rem; }
 
     .lines-button.close {
-      -webkit-transform: scale3d(0.8, 0.8, 0.8);
-      transform: scale3d(0.8, 0.8, 0.8); }
+      -webkit-transform: scale3d(0.95, 0.95, 0.95);
+      transform: scale3d(0.95, 0.95, 0.95); }
 
     .lines-button.x2 .lines {
       transition: background .3s .5s ease; }
