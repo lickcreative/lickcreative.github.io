@@ -978,7 +978,7 @@ there.
       z-index: 10;
       left: 0;
       top: 0;
-      height: 50px;
+      height: auto;
       padding: 5px 30px;
       font-size: 1em;
       line-height: 1.25em;
@@ -986,184 +986,92 @@ there.
       border-color: transparent;
       }
 
+      .lick-logo:hover,
+      .lick-logo:active,
+      .lick-logo:focus {
+        background-color: transparent;
+        border-color: transparent;
+      }
+
       .lick-logo img {
         height: 40px;
       }
 
 
-      /* ====================== lines button ==================================================*/
-      .lines-button {
-        transition: .3s;
-        cursor: pointer;
-        user-select: none;
-        border-radius: 0.35714rem;
+    /* ====================== lines button ==================================================*/
+    .lines-button {
+      transition: .3s;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 0.35714rem;
+      background-color: transparent;
+      border-color: transparent;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10; }
+      .lines-button:hover {
+        border-color: transparent; }
+      .lines-button:focus, .lines-button:active {
         background-color: transparent;
-        border-color: transparent;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 10; }
-        .lines-button:hover {
-          border-color: transparent; }
-        .lines-button:focus, .lines-button:active {
-          background-color: transparent;
-          border-color: transparent; }
+        border-color: transparent; }
 
-      .lines {
+    .lines {
+      display: inline-block;
+      width: 2.5rem;
+      height: 0.3125rem;
+      background: #fff;
+      border-radius: 0.17857rem;
+      transition: 0.3s;
+      position: relative; }
+      .lines:before, .lines:after {
         display: inline-block;
         width: 2.5rem;
         height: 0.3125rem;
         background: #fff;
         border-radius: 0.17857rem;
         transition: 0.3s;
-        position: relative; }
-        .lines:before, .lines:after {
-          display: inline-block;
-          width: 2.5rem;
-          height: 0.3125rem;
-          background: #fff;
-          border-radius: 0.17857rem;
-          transition: 0.3s;
-          position: absolute;
-          left: 0;
-          content: '';
-          -webkit-transform-origin: 0.17857rem center;
-          transform-origin: 0.17857rem center; }
-        .lines:before {
-          top: 0.625rem; }
-        .lines:after {
-          top: -0.625rem; }
+        position: absolute;
+        left: 0;
+        content: '';
+        -webkit-transform-origin: 0.17857rem center;
+        transform-origin: 0.17857rem center; }
+      .lines:before {
+        top: 0.625rem; }
+      .lines:after {
+        top: -0.625rem; }
 
-      .lines-button:hover .lines:before {
-        top: 0.71429rem; }
-      .lines-button:hover .lines:after {
-        top: -0.71429rem; }
+    .lines-button:hover .lines:before {
+      top: 0.71429rem; }
+    .lines-button:hover .lines:after {
+      top: -0.71429rem; }
 
-      .lines-button.close {
-        -webkit-transform: scale3d(0.8, 0.8, 0.8);
-        transform: scale3d(0.8, 0.8, 0.8); }
+    .lines-button.close {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8);
+      transform: scale3d(0.8, 0.8, 0.8); }
 
-      .lines-button.x2 .lines {
-        transition: background .3s .5s ease; }
-        .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
-          -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-          transition: top .3s .6s ease, -webkit-transform .3s ease;
-          transition: top .3s .6s ease, transform .3s ease; }
+    .lines-button.x2 .lines {
+      transition: background .3s .5s ease; }
+      .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        transition: top .3s .6s ease, -webkit-transform .3s ease;
+        transition: top .3s .6s ease, transform .3s ease; }
 
-      .lines-button.x2.close .lines {
-        transition: background .3s 0s ease;
-        background: transparent; }
-        .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
-          transition: top .3s ease, -webkit-transform .3s .5s ease;
-          transition: top .3s ease, transform .3s .5s ease;
-          top: 0;
-          width: 2.5rem; }
-        .lines-button.x2.close .lines:before {
-          -webkit-transform: rotate3d(0, 0, 1, 45deg);
-          transform: rotate3d(0, 0, 1, 45deg); }
-        .lines-button.x2.close .lines:after {
-          -webkit-transform: rotate3d(0, 0, 1, -45deg);
-          transform: rotate3d(0, 0, 1, -45deg); }
-
-      /*# sourceMappingURL=custom.css.map */
-
-
-  /* .button--mmenu {
-    position: fixed;
-    right: 0;
-    top: 0;
-    border: none;
-    z-index: 10;
-  }
-
-  .button--mmenu:active,
-  .button--mmenu:focus {
-    border-color: transparent;
-    background-color: transparent;
-  } */
-
-/* .navicon-button {
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 2rem 1.5rem;
-  transition: 0.25s;
-  cursor: pointer;
-  user-select: none;
-  opacity: .8;
-}
-.navicon-button .navicon:before, .navicon-button .navicon:after {
-  transition: 0.25s;
-}
-.navicon-button:hover {
-  transition: 0.5s;
-  opacity: 1;
-}
-.navicon-button:hover .navicon:before, .navicon-button:hover .navicon:after {
-  transition: 0.25s;
-}
-.navicon-button:hover .navicon:before {
-  top: .825rem;
-}
-.navicon-button:hover .navicon:after {
-  top: -.825rem;
-}
-
-.navicon {
-  position: relative;
-  width: 2em;
-  height: .3125rem;
-  background: #fff;
-  transition: 0.5s;
-  border-radius: 2.5rem;
-}
-.navicon:before, .navicon:after {
-  display: block;
-  content: "";
-  height: .3125rem;
-  width: 2.5rem;
-  background: #fff;
-  position: absolute;
-  z-index: -1;
-  transition: 0.5s 0.25s;
-  border-radius: 1rem;
-}
-.navicon:before {
-  top: .625rem;
-}
-.navicon:after {
-  top: -.625rem;
-}
-
-.open:not(.steps) .navicon:before,
-.open:not(.steps) .navicon:after {
-  top: 0 !important;
-}
-
-.open .navicon:before,
-.open .navicon:after {
-  transition: 0.5s;
-}
-
-× and +
-.open.plus .navicon,
-.open.x .navicon {
-  background: transparent;
-}
-.open.plus .navicon:before,
-.open.x .navicon:before {
-  transform: rotate(-45deg);
-}
-.open.plus .navicon:after,
-.open.x .navicon:after {
-  transform: rotate(45deg);
-}
-
-.open.plus {
-  transform: scale(0.75) rotate(45deg);
-} */
+    .lines-button.x2.close .lines {
+      transition: background .3s 0s ease;
+      background: transparent; }
+      .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
+        transition: top .3s ease, -webkit-transform .3s .5s ease;
+        transition: top .3s ease, transform .3s .5s ease;
+        top: 0;
+        width: 2.5rem; }
+      .lines-button.x2.close .lines:before {
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg); }
+      .lines-button.x2.close .lines:after {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg); }
 
   /* Mobile menu overlay courtesy of:
      http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/ */
@@ -1378,7 +1286,7 @@ there.
     /* Larger than phablet */
     @media (min-width: 46.875em) {
 
-      .button--mmenu {
+      .lines-button {
         display: none; /* Hide mobile menu trigger button */
       }
 
@@ -1498,20 +1406,21 @@ there.
 
     /* Team image thumbnail grid */
 
-    .team_grid {
+    .team-grid  {
       		padding: 0;
     			overflow: hidden;
           list-style: none;
+          margin: 0;
     		}
 
-    		.team_grid li {
+    		.team-grid  li {
     			float: left;
     			width: 50%;
     			padding: 0;
           margin: 0;
     		}
 
-        .team_grid figure {
+        .team-grid  figure {
     	    overflow: hidden;
         	position: relative;
           cursor: default;
@@ -1519,9 +1428,29 @@ there.
           padding: 0;
         }
 
-        .team_grid figcaption {
+        .flex-container {
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+                  justify-content: center;
+
+        }
+
+        .team-grid  figcaption {
         	background: rgba(237,9,113,.6);
-        	color: white;
         	height: 100%;
           width: 100%;
         	left: 0;
@@ -1529,65 +1458,84 @@ there.
         	position: absolute;
         	right: 0;
         	top: 0;
-          -webkit-transition: all 300ms;
-        	transition: all 300ms;
-        	-webkit-transition-delay: 50ms;
-        	transition-delay: 50ms;
+          -webkit-transition: all .5s;
+        	transition: all .5s;
+        	-webkit-transition-delay: 10ms;
+        	transition-delay: 10ms;
         	z-index: 1;
         }
 
-            .team_grid figcaption h3 {
-              font-size: 1.1rem;
-              line-height: 1;
-              position: relative;
-              vertical-align: middle;
-              text-align: center;
-            }
+        .team-grid figcaption p {
+          opacity: 0;
+          color: white;
+          font-family: 'Novecento Sans W01 Wd Md','Proxima Nova W01 Thin Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+          text-transform: uppercase;
+          font-size: 1rem;
+          line-height: 1;
+          text-align: center;
+          margin: 0 1rem;
+          -webkit-transition: all .8s;
+        	transition: all .8s;
+        	-webkit-transition-delay: 300ms;
+        	transition-delay: 300ms;
+        	z-index: 1;
+        }
 
-    		.team_grid img {
+          .flex-item {
+            box-sizing: border-box;
+            max-width: 100%;
+          }
+
+    		.team-grid  img {
     			display: block;
           -webkit-transition: all 300ms;
     	    transition: all 300ms;
     		}
 
-        .team_grid figure:hover figcaption {
+        .team-grid  figure:hover figcaption,
+        .team-grid  figure:hover p {
     	    opacity: 1;
         }
 
-    		.team_grid li:nth-child(odd) {
+    		.team-grid  li:nth-child(odd) {
     			clear: left;
     		}
 
     		@media screen and (min-width: 34.375em) {
-    			.team_grid li {
+
+          .team-grid figcaption p {
+            font-size: 1.25rem;
+          }
+
+    			.team-grid  li {
     		    	width: 33.3333333333333333%;
     		  	}
-    		  	.team_grid li:nth-child(3n+1) {
+    		  	.team-grid  li:nth-child(3n+1) {
     		  		clear: left;
     		  	}
-    		  	.team_grid li:nth-child(odd) {
+    		  	.team-grid  li:nth-child(odd) {
     				clear: none;
     			}
     		}
     		@media screen and (min-width: 46.875em) {
-    			.team_grid li {
+    			.team-grid  li {
     		    	width: 25%;
     		  	}
-    		  	.team_grid li:nth-child(4n+1) {
+    		  	.team-grid  li:nth-child(4n+1) {
     		  		clear: left;
     		  	}
-    		  	.team_grid li:nth-child(3n+1) {
+    		  	.team-grid  li:nth-child(3n+1) {
     				clear: none;
     			}
     		}
     		@media screen and (min-width: 62.5em) {
-    			.team_grid li {
+    			.team-grid  li {
     		    	width: 20%;
     		  	}
-    		  	.team_grid li:nth-child(5n+1) {
+    		  	.team-grid  li:nth-child(5n+1) {
     		  		clear: left;
     		  	}
-    		  	.team_grid li:nth-child(4n+1) {
+    		  	.team-grid  li:nth-child(4n+1) {
     				clear: none;
     			}
     		}
@@ -1688,7 +1636,7 @@ there.
     }
 
     .big-answer {
-      font-family: 'Novecento Sans W01 Wd Lt','Proxima Nova W01 Thin Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+      font-family: 'Novecento Sans W01 Wd Lt','Proxima Nova W01 Thin Regular', "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 3rem;
       color: #f06;
       line-height: 1;
