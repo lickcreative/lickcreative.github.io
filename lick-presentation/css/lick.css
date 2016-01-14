@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+html {
+  color: #363636;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3,h4,h5,h6,.title--main,.title--sub {
+  color: 333;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.title--main {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h1    {font-size: 3.157em;}
+h2    {font-size: 2.369em;}
+h3    {font-size: 1.777em;}
+h4    {font-size: 1.333em;}
+small {font-size: 0.75em; }
+
+.title--main { font-size: 3.157em; }
+.title--sub  { font-size: 1.333em; }
+
+/* Image backgrounds */
+
+.bg--bulbs {
+  background: url(../img/bulbs--portrait.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 50em) {
+    .bg--bulbs {
+      background: url(../img/bulbs--landscape.jpg) no-repeat center center;
+      background-size: cover;
+    }
+}
+
+/* Basic page styling */
+
+.page {
+  width: 100%;
+  height: 100%; /* Set regular height and width */
+  width: 100vw;
+  min-height: 100vh; /* Use vw/vh to fill screen for browsers that support it */
+  background-color: white;
+
+  display: flex;
+  flex-direction: column; /* Align content to vertical axis */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 2rem;
+
+  /*border: 2px red solid;*/
+}
+
+@media only screen and (min-width: 50em) {
+    .page--copy {
+      padding: 0;
+      flex-direction: row;
+    }
+    .page_left {
+      flex: 1;
+      padding: 5rem;
+      padding-right: 1rem;
+      height: 100vh;
+    }
+    .page_right {
+      flex: 1;
+      padding: 5rem;
+      padding-left: 1rem;
+      height: 100vh;
+    }
+}
+
+/* Title page styling */
+
+.page--title {
+  background-color: #18263c;
+}
+
+.page--title .lick-logo {
+  width: 100%;
+  width: 60vw;
+  height: auto;
+  margin: 0;
+}
+
+@media only screen and (min-width: 50em) {
+    .page--title .lick-logo {
+      max-width: 20rem;
+    }
+}
+
+.page--title .title--main,
+.page--title .title--sub {
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+.title--main { font-weight: 100; }
+.title--sub { font-weight: 700; }
+
+.page--copy {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.page_img {
+  width: 100%;
+  max-height: 100vh;
+}
