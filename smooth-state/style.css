@@ -115,9 +115,13 @@ section {
 
 @keyframes scaleDown {
   0% {
-    transform: scale(10);
+    transform: scaleX(10);
+    transform: scaleY(10);
+  }
+  75% {
+    transform: scaleX(1);
   }
   100% {
-    transform: scale(1.0);
+    transform: scaleY(1);
   }
 }
