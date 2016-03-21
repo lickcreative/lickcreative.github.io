@@ -4,9 +4,11 @@ body {
 }
 nav {
   position: fixed;
+  width: 100%;
   top: 0;
   right: 1rem;
   z-index: 100;
+  background: #e70072;
 }
 nav > ul {
   display: -webkit-box;
