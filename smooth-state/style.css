@@ -3,6 +3,7 @@ body {
   overflow: hidden;
   font-family: Helvetica, Arial, sans-serif;
 }
+
 nav {
   position: fixed;
   width: 100%;
@@ -13,6 +14,7 @@ nav {
   background: #e70072;
   color: white;
 }
+
 nav > ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,16 +25,20 @@ nav > ul {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
+
 nav > ul > li {
   list-style-type: none;
   padding: 0;
 }
+
 nav > ul > li:not(:last-child) {
   margin-right: 1rem;
 }
+
 nav > ul > li > a {
   text-decoration: none;
 }
+
 section {
   height: 100vh;
   display: -webkit-box;
@@ -48,16 +54,19 @@ section {
   -ms-flex-align: center;
   align-items: center;
 }
+
 .box {
   max-width: 50%;
   padding: 1.5rem;
   color: white;
   background: #e70072;
 }
+
 .box_para {
   margin: 0;
   font-size: 1.125rem;
 }
+
 .m-scene .scene_element {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -66,18 +75,22 @@ section {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 .m-scene .scene_element--fadein {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
 .m-scene .scene_element--scaledown {
   -webkit-animation-name: scaleDown;
   animation-name: scaleDown;
 }
+
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse;
 }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -86,6 +99,7 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -96,7 +110,13 @@ section {
 }
 
 @keyframes scaleDown {
-  0%   { transform: scale(5.0); }
-  95%  { transform: scale(0.8); }
-  100% { transform: scale(1.0); }
+  0% {
+    transform: scale(5.0);
+  }
+  95% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }
