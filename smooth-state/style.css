@@ -70,8 +70,8 @@ section {
 .m-scene .scene_element {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
