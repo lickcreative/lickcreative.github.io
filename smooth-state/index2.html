@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothState.js/0.7.2/jquery.smoothState.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="main" class="m-scene">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">One</a></li>
+        <li><a href="index2.html">Two</a></li>
+      </ul>
+    </nav>
+
+    <section id="2" class="scene_element scene_element--fadein">
+      <div class="box">
+        <p class="box_para">
+          Section 2 dolor sit amet, consectetur adipisicing elit. Accusamus beatae animi modi praesentium laborum optio quae aperiam, sapiente porro dolores itaque delectus assumenda, dolorem nisi molestias illo, ducimus facere rem voluptatum exercitationem, similique dicta ipsa!
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+<script>
+;(function($) {
+'use strict';
+var $body = $('html, body'),
+    content = $('#main').smoothState({
+      // Runs when a link has been activated
+      onStart: {
+        duration:1000, // Duration of our animation
+        render: function (url, $container) {
+          // toggleAnimationClass() is a public method
+          // for restarting css animations with a class
+          content.toggleAnimationClass('is-exiting');
+          // Scroll user to the top
+          $body.animate({
+            scrollTop: 0
+          });
+        }
+      }
+    }).data('smoothState');
+    //.data('smoothState') makes public methods available
+})(jQuery);
+</script>
+</html>
