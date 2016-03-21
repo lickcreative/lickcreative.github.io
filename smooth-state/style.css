@@ -94,8 +94,8 @@ section {
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fadeIn {
