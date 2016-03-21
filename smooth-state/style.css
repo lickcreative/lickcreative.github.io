@@ -1,6 +1,7 @@
 body {
   height: 100vh;
   overflow: hidden;
+  font-family: Helvetica, Arial, sans-serif;
 }
 nav {
   position: fixed;
@@ -9,6 +10,7 @@ nav {
   right: 1rem;
   z-index: 100;
   background: #e70072;
+  color: white;
 }
 nav > ul {
   display: -webkit-box;
