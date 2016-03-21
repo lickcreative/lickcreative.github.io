@@ -115,9 +115,9 @@ section {
 
 @keyframes scaleDown {
   0% {
-    transform: scale(5.0);
+    transform: scale(10);
   }
-  95% {
+  90% {
     transform: scale(0.8);
   }
   100% {
