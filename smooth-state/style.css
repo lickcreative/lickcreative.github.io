@@ -88,11 +88,14 @@ section {
 .m-scene .scene_element--scaledown {
   -webkit-animation-name: scaleDown;
   animation-name: scaleDown;
+
 }
 
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes fadeIn {
