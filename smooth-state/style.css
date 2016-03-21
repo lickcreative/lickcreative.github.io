@@ -79,6 +79,7 @@ section {
 .m-scene .scene_element--fadein {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  animation-delay: 1s;
 }
 
 .m-scene .scene_element--scaledown {
