@@ -117,9 +117,6 @@ section {
   0% {
     transform: scale(10);
   }
-  90% {
-    transform: scale(0.9);
-  }
   100% {
     transform: scale(1.0);
   }
